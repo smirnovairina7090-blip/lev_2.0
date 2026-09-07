@@ -1,0 +1,11 @@
+{
+
+  "parent": "minecraft:item/handheld",
+
+  "textures": {
+
+    "layer0": "azazels-alchemy-table:item/magicwand_texture"
+
+  }
+
+}
