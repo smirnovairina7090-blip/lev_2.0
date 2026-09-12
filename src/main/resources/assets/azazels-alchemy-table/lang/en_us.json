@@ -3,5 +3,10 @@
   "container.azazels-alchemy-table.alchemy_table": "Alchemy Table",
   "item.azazels-alchemy-table.double_potion": "Double Potion",
   "item.azazels-alchemy-table.magic_wand": "Magic Wand",
-  "item.azazels-alchemy-table.light_magic_wand": "Magic Wand: Light Charge"
+  "item.azazels-alchemy-table.light_magic_wand": "Magic Wand: Light Charge",
+  "item.azazels-alchemy-table.fire_magic_wand": "Magic Wand: Fire Charge",
+  "item.azazels-alchemy-table.water_magic_wand": "Magic Wand: Heart of the Sea",
+  "item.azazels-alchemy-table.wind_magic_wand": "Magic Wand: Wind Charge",
+  "item.azazels-alchemy-table.redstone_magic_wand": "Magic Wand: Redstone Charge",
+  "item.azazels-alchemy-table.glowing_magic_wand": "Magic Wand: Glow Charge"
 }
