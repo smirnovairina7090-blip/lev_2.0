@@ -18,6 +18,16 @@ public final class ModEntities {
                     .build()
     );
 
+    public static final EntityType<FireProjectile> FIRE_PROJECTILE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            AzazelSAlchemyTable.id("fire_projectile"),
+            EntityType.Builder.<FireProjectile>of(FireProjectile::new, MobCategory.MISC)
+                    .sized(0.25F, 0.25F)
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+                    .build()
+    );
+
     public static void registerModEntities() {
         AzazelSAlchemyTable.LOGGER.info("Registering projectile entities");
     }
