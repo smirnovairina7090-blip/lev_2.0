@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    { "item": "azazels-alchemy-table:magic_wand" },
+    { "item": "minecraft:ominous_bottle" }
+  ],
+  "result": {
+    "id": "azazels-alchemy-table:glowing_magic_wand",
+    "count": 1
+  },
+  "show_notification": true
+}
