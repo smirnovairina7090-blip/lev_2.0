@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    { "item": "azazels-alchemy-table:magic_wand" },
+    { "item": "minecraft:fire_charge" }
+  ],
+  "result": {
+    "id": "azazels-alchemy-table:fire_magic_wand",
+    "count": 1
+  },
+  "show_notification": true
+}
