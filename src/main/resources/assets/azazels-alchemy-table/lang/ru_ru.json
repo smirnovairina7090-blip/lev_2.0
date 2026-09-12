@@ -3,5 +3,10 @@
   "container.azazels-alchemy-table.alchemy_table": "Алхимический стол",
   "item.azazels-alchemy-table.double_potion": "Двойное зелье",
   "item.azazels-alchemy-table.magic_wand": "Волшебная палочка",
-  "item.azazels-alchemy-table.light_magic_wand": "Волшебная палочка"
+  "item.azazels-alchemy-table.light_magic_wand": "Волшебная палочка: световой заряд",
+  "item.azazels-alchemy-table.fire_magic_wand": "Волшебная палочка: огненный заряд",
+  "item.azazels-alchemy-table.water_magic_wand": "Волшебная палочка: сердце моря",
+  "item.azazels-alchemy-table.wind_magic_wand": "Волшебная палочка: заряд ветра",
+  "item.azazels-alchemy-table.redstone_magic_wand": "Волшебная палочка: редстоун",
+  "item.azazels-alchemy-table.glowing_magic_wand": "Волшебная палочка: зловещий заряд"
 }
