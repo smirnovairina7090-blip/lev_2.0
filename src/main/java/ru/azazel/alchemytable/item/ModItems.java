@@ -30,7 +30,7 @@ public final class ModItems {
     public static final Item WATER_MAGIC_WAND = Registry.register(
             BuiltInRegistries.ITEM,
             AzazelSAlchemyTable.id("water_magic_wand"),
-            new Item(new Item.Properties().stacksTo(1))
+            new WaterMagicWandItem(new Item.Properties().stacksTo(1))
     );
 
     public static final Item WIND_MAGIC_WAND = Registry.register(
