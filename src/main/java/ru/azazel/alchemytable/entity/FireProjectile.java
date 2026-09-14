@@ -28,6 +28,15 @@ public class FireProjectile extends ThrowableItemProjectile {
         super.onHit(result);
 
         if (!level().isClientSide) {
+            level().explode(
+                    this,
+                    getX(),
+                    getY(),
+                    getZ(),
+                    3.0F,
+                    Level.ExplosionInteraction.NONE
+            );
+
             discard();
         }
     }
