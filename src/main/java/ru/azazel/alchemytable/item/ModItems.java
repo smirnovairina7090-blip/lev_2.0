@@ -48,7 +48,7 @@ public final class ModItems {
     public static final Item GLOWING_MAGIC_WAND = Registry.register(
             BuiltInRegistries.ITEM,
             AzazelSAlchemyTable.id("glowing_magic_wand"),
-            new Item(new Item.Properties().stacksTo(1))
+            new GlowingMagicWandItem(new Item.Properties().stacksTo(1))
     );
 
     public static void registerModItems() {
