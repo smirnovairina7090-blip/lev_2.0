@@ -39,5 +39,10 @@ public class AzazelSAlchemyTableClient implements ClientModInitializer {
                 ModEntities.WIND_PROJECTILE,
                 ThrownItemRenderer::new
         );
+
+        EntityRendererRegistry.register(
+                ModEntities.REDSTONE_PROJECTILE,
+                ThrownItemRenderer::new
+        );
     }
 }

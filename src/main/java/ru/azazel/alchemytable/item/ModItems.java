@@ -42,7 +42,7 @@ public final class ModItems {
     public static final Item REDSTONE_MAGIC_WAND = Registry.register(
             BuiltInRegistries.ITEM,
             AzazelSAlchemyTable.id("redstone_magic_wand"),
-            new Item(new Item.Properties().stacksTo(1))
+            new RedstoneMagicWandItem(new Item.Properties().stacksTo(1))
     );
 
     public static final Item GLOWING_MAGIC_WAND = Registry.register(

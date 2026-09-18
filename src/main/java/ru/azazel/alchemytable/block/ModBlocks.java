@@ -24,6 +24,15 @@ public final class ModBlocks {
             )
     );
 
+    public static final Block REDSTONE_PULSE = registerBlockOnly(
+            "redstone_pulse",
+            new RedstonePulseBlock(
+                    BlockBehaviour.Properties.of()
+                            .noCollission()
+                            .noOcclusion()
+            )
+    );
+
     private static Block registerBlock(String name, Block block) {
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
                 AzazelSAlchemyTable.MOD_ID,
@@ -43,6 +52,19 @@ public final class ModBlocks {
         );
 
         return registeredBlock;
+    }
+
+    private static Block registerBlockOnly(String name, Block block) {
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
+                AzazelSAlchemyTable.MOD_ID,
+                name
+        );
+
+        return Registry.register(
+                BuiltInRegistries.BLOCK,
+                id,
+                block
+        );
     }
 
     public static void registerModBlocks() {
