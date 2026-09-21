@@ -1,7 +1,9 @@
 package ru.azazel.alchemytable;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.monster.Spider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.azazel.alchemytable.block.ModBlocks;
@@ -20,6 +22,12 @@ public class AzazelSAlchemyTable implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModBlockEntities.registerModBlockEntities();
         ModEntities.registerModEntities();
+
+        FabricDefaultAttributeRegistry.register(
+                ModEntities.CRYSTAL_SPIDER,
+                Spider.createAttributes()
+        );
+
         ModItems.registerModItems();
         ModMenuTypes.registerModMenuTypes();
 
