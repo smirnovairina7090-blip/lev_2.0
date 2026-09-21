@@ -31,6 +31,8 @@ public class WaterMagicWandItem extends Item {
                             0
                     )
             );
+
+            player.getCooldowns().addCooldown(this, 200);
         }
 
         return InteractionResultHolder.sidedSuccess(

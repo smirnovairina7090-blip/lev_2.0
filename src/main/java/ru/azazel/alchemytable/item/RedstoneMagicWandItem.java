@@ -36,6 +36,8 @@ public class RedstoneMagicWandItem extends Item {
             );
 
             level.addFreshEntity(projectile);
+
+            player.getCooldowns().addCooldown(this, 200);
         }
 
         return InteractionResultHolder.sidedSuccess(

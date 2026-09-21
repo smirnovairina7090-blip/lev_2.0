@@ -42,6 +42,8 @@ public class GlowingMagicWandItem extends Item {
                         )
                 );
             }
+
+            player.getCooldowns().addCooldown(this, 200);
         }
 
         return InteractionResultHolder.sidedSuccess(

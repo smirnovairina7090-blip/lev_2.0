@@ -29,6 +29,8 @@ public class FireMagicWandItem extends Item {
                     1.0F
             );
             level.addFreshEntity(projectile);
+
+            player.getCooldowns().addCooldown(this, 200);
         }
 
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
