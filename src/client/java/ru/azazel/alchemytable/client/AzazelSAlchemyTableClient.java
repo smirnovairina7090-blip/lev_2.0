@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.SpiderRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import ru.azazel.alchemytable.block.ModBlocks;
 import ru.azazel.alchemytable.client.screen.AlchemyTableScreen;
@@ -43,6 +44,11 @@ public class AzazelSAlchemyTableClient implements ClientModInitializer {
         EntityRendererRegistry.register(
                 ModEntities.REDSTONE_PROJECTILE,
                 ThrownItemRenderer::new
+        );
+
+        EntityRendererRegistry.register(
+                ModEntities.CRYSTAL_SPIDER,
+                SpiderRenderer::new
         );
     }
 }
