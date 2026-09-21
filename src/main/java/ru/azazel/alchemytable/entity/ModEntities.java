@@ -48,8 +48,17 @@ public final class ModEntities {
                     .build()
     );
 
+    public static final EntityType<CrystalSpider> CRYSTAL_SPIDER = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            AzazelSAlchemyTable.id("crystal_spider"),
+            EntityType.Builder.<CrystalSpider>of(CrystalSpider::new, MobCategory.MONSTER)
+                    .sized(1.4F, 0.9F)
+                    .clientTrackingRange(8)
+                    .build()
+    );
+
     public static void registerModEntities() {
-        AzazelSAlchemyTable.LOGGER.info("Registering projectile entities");
+        AzazelSAlchemyTable.LOGGER.info("Registering mod entities");
     }
 
     private ModEntities() {
