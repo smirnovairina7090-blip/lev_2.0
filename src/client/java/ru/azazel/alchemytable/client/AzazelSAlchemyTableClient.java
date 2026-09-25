@@ -2,12 +2,14 @@ package ru.azazel.alchemytable.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.SpiderRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import ru.azazel.alchemytable.block.ModBlocks;
+import ru.azazel.alchemytable.client.model.CrystalSpiderModel;
+import ru.azazel.alchemytable.client.renderer.CrystalSpiderRenderer;
 import ru.azazel.alchemytable.client.screen.AlchemyTableScreen;
 import ru.azazel.alchemytable.entity.ModEntities;
 import ru.azazel.alchemytable.menu.ModMenuTypes;
@@ -46,9 +48,14 @@ public class AzazelSAlchemyTableClient implements ClientModInitializer {
                 ThrownItemRenderer::new
         );
 
+        EntityModelLayerRegistry.registerModelLayer(
+                CrystalSpiderModel.LAYER_LOCATION,
+                CrystalSpiderModel::createBodyLayer
+        );
+
         EntityRendererRegistry.register(
                 ModEntities.CRYSTAL_SPIDER,
-                SpiderRenderer::new
+                CrystalSpiderRenderer::new
         );
     }
 }
