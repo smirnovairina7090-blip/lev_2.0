@@ -37,8 +37,14 @@
           "name": "minecraft:amethyst_block",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.05
+              "condition": "minecraft:random_chance_with_enchanted_bonus",
+              "enchantment": "minecraft:looting",
+              "unenchanted_chance": 0.05,
+              "enchanted_chance": {
+                "type": "minecraft:linear",
+                "base": 0.06,
+                "per_level_above_first": 0.01
+              }
             }
           ]
         }
@@ -52,8 +58,14 @@
           "name": "minecraft:calcite",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.1
+              "condition": "minecraft:random_chance_with_enchanted_bonus",
+              "enchantment": "minecraft:looting",
+              "unenchanted_chance": 0.1,
+              "enchanted_chance": {
+                "type": "minecraft:linear",
+                "base": 0.12,
+                "per_level_above_first": 0.02
+              }
             }
           ]
         }
