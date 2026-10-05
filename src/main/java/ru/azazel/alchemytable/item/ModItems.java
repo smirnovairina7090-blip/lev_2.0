@@ -5,7 +5,9 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
 import ru.azazel.alchemytable.AzazelSAlchemyTable;
+import ru.azazel.alchemytable.entity.ModEntities;
 
 public final class ModItems {
 
@@ -51,6 +53,23 @@ public final class ModItems {
             new GlowingMagicWandItem(new Item.Properties().stacksTo(1))
     );
 
+    // Яйцо призыва кристаллического паука.
+    // Теперь моба можно создавать обычным ПКМ, без команды /summon.
+    //
+    // Первое число - основной цвет стандартного яйца.
+    // Второе число - цвет пятен.
+    // Позже стандартную картинку заменим на вашу готовую текстуру.
+    public static final Item CRYSTAL_SPIDER_SPAWN_EGG = Registry.register(
+            BuiltInRegistries.ITEM,
+            AzazelSAlchemyTable.id("crystal_spider_spawn_egg"),
+            new SpawnEggItem(
+                    ModEntities.CRYSTAL_SPIDER,
+                    0x6E45A8,
+                    0xD7B7FF,
+                    new Item.Properties()
+            )
+    );
+
     public static void registerModItems() {
         ItemGroupEvents.modifyEntriesEvent(
                 CreativeModeTabs.TOOLS_AND_UTILITIES
@@ -62,6 +81,14 @@ public final class ModItems {
             entries.accept(WIND_MAGIC_WAND);
             entries.accept(REDSTONE_MAGIC_WAND);
             entries.accept(GLOWING_MAGIC_WAND);
+        });
+
+        // Яйцо кладём именно во вкладку "Яйца призыва",
+        // чтобы его было легко найти в Creative.
+        ItemGroupEvents.modifyEntriesEvent(
+                CreativeModeTabs.SPAWN_EGGS
+        ).register(entries -> {
+            entries.accept(CRYSTAL_SPIDER_SPAWN_EGG);
         });
     }
 
